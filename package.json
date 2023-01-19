@@ -1,0 +1,20 @@
+{
+  "name": "sass-library",
+  "version": "1.0.0",
+  "description": "A simple style library made using Sass.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/as00r-dev/sass-library.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/as00r-dev/sass-library/issues"
+  },
+  "homepage": "https://github.com/as00r-dev/sass-library#readme"
+}
