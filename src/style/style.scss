@@ -1,4 +1,7 @@
-@import "variables";
+@import "partials/variables";
+@import "partials/reset";
+@import "partials/fonts";
+@import "partials/utils";
 
 h1 {
 	color: $primary;

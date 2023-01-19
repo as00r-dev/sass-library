@@ -1,8 +1,5 @@
 // import styles
-import "../style/fonts.scss";
-import "../style/reset.scss";
 import "../style/style.scss";
-import "../style/utils.scss";
 
 // import modules
 import { Heading } from "./components/heading";
