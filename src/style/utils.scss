@@ -1,0 +1,13 @@
+@import "../style/style.scss";
+
+.error {
+	color: $error;
+	border-color: $error;
+	border-style: solid;
+}
+
+.notification {
+	color: $secondary;
+	border-color: $secondary;
+	border-color: solid;
+}
