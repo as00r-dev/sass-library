@@ -2,14 +2,17 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-	entry: "./src/script.js",
+	mode: "development",
+	entry: "./src//js/script.js",
 	output: {
 		filename: "main.js",
 		path: path.resolve(__dirname, "dist"),
+		clean: true,
 	},
+	devtool: "inline-source-map",
 	plugins: [
 		new HtmlWebpackPlugin({
-			title: "Output Management",
+			title: "Sass Library",
 		}),
 	],
 	module: {
@@ -17,6 +20,10 @@ module.exports = {
 			{
 				test: /\.s[ac]ss$/i,
 				use: ["style-loader", "css-loader", "sass-loader"],
+			},
+			{
+				test: /\.(woff|woff2|eot|ttf|otf)$/i,
+				type: "asset/resource",
 			},
 		],
 	},

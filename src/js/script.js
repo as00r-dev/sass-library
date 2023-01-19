@@ -1,3 +1,5 @@
+import "../style/style.scss";
+
 const helloWorldComponent = () => {
 	const elem = document.createElement("h1");
 	elem.textContent = "Hello World!";
