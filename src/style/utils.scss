@@ -1,13 +1,21 @@
-@import "../style/style.scss";
+@import "variables";
 
 .error {
 	color: $error;
 	border-color: $error;
 	border-style: solid;
+	margin: $base-margin;
+	padding: $base-padding;
+	border-radius: $base-border-radius;
+	border-width: $base-border-thickness;
 }
 
 .notification {
 	color: $secondary;
 	border-color: $secondary;
-	border-color: solid;
+	border-style: solid;
+	margin: $base-margin;
+	padding: $base-padding;
+	border-radius: $base-border-radius;
+	border-width: $base-border-thickness;
 }
