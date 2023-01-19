@@ -1,3 +1,5 @@
+import "../style/fonts.scss";
+import "../style/reset.scss";
 import "../style/style.scss";
 
 const helloWorldComponent = () => {
