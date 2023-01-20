@@ -6,29 +6,19 @@ import { Heading } from "./components/heading";
 import { Button } from "./components/button";
 import { Paragraph } from "./components/paragraph";
 import { Anchor } from "./components/anchor";
+import { Card } from "./components/card";
 
 const body = document.querySelector("body");
 
 body.append(
 	Heading({
 		type: 1,
-		content: "This is an H1",
+		content: "Cards",
 		classes: ["heading"],
 	}),
-	Anchor({
-		content: "This is an anchor.",
-		classes: ["anchor"],
-	}),
-	Paragraph({
-		content: "This is an error",
-		classes: ["error"],
-	}),
-	Paragraph({
-		content: "This is a notification",
-		classes: ["notification"],
-	}),
-	Button({
-		content: "Click Me",
-		classes: ["button"],
+	Card({
+		title: "This is a card",
+		content:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
 	})
 );
