@@ -1,17 +1,20 @@
 // fonts
-@import "partials/fonts";
+@import "partials/base/fonts";
 
 // css reset
-@import "partials/reset";
+@import "partials/base/reset";
 
 // variables and functions
-@import "partials/variables";
+@import "partials/base/variables";
+
+// colors
+@import "partials/base/colors";
 
 // base & layout
-@import "partials/base";
+@import "partials/base/base";
 
 // utility classes
-@import "partials/utils";
+@import "partials/base/utils";
 
 // components
 @import "partials/components/card";

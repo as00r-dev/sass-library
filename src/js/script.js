@@ -7,10 +7,17 @@ import { Button } from "./components/button";
 import { Paragraph } from "./components/paragraph";
 import { Anchor } from "./components/anchor";
 import { Card } from "./components/card";
+import { Colors } from "./components/colors";
 
 const body = document.querySelector("body");
 
 body.append(
+	Heading({
+		type: 1,
+		content: "Colors",
+		classes: ["heading"],
+	}),
+	Colors(),
 	Heading({
 		type: 1,
 		content: "Cards",
