@@ -21,6 +21,30 @@ export const Colors = () => {
 		bgColor.insertAdjacentElement("afterend", separator);
 	});
 	c.insertAdjacentHTML("beforeend", "<br><br>");
+	colors.forEach((color) => {
+		if (color === "primary") {
+			for (let i = 2; i <= 8; i += 2) {
+				const darkVariation = document.createElement("span");
+				darkVariation.textContent = `primary dark ${i}`;
+				darkVariation.classList.add(`bg-primary-dark-${i}`);
+				darkVariation.classList.add("text-white");
+				const separator = document.createElement("span");
+				separator.textContent = " | ";
+				c.insertAdjacentElement("beforeend", darkVariation);
+				darkVariation.insertAdjacentElement("afterend", separator);
+			}
+			for (let i = 2; i <= 8; i += 2) {
+				const lightVariation = document.createElement("span");
+				lightVariation.textContent = `primary light ${i}`;
+				lightVariation.classList.add(`bg-primary-light-${i}`);
+				lightVariation.classList.add("text-black");
+				const separator = document.createElement("span");
+				separator.textContent = " | ";
+				c.insertAdjacentElement("beforeend", lightVariation);
+				lightVariation.insertAdjacentElement("afterend", separator);
+			}
+		}
+	});
 	return c;
 };
 
