@@ -4,13 +4,13 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
 	mode: "development",
+	devtool: "source-map",
 	entry: "./src//js/script.js",
 	output: {
 		filename: "main.js",
 		path: path.resolve(__dirname, "dist"),
 		clean: true,
 	},
-	devtool: "inline-source-map",
 	plugins: [
 		new HtmlWebpackPlugin({
 			title: "Sass Library",
@@ -23,7 +23,17 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.s[ac]ss$/i,
+				test: /\.m?js$/,
+				exclude: /node_modules/,
+				use: {
+					loader: "babel-loader",
+					options: {
+						presets: [["@babel/preset-env", { targets: "defaults" }]],
+					},
+				},
+			},
+			{
+				test: /\.s?css$/,
 				use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
 			},
 			{
