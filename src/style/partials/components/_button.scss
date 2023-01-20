@@ -5,6 +5,8 @@
 	padding: $base-padding $base-padding * 2;
 	border-radius: $base-border-radius;
 	background-color: $bg-color;
+	// some margin to separate demo buttons remove for project use
+	margin-right: 5px;
 }
 
 .btn {
