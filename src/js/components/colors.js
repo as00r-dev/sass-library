@@ -45,6 +45,7 @@ export const Colors = () => {
 			}
 		}
 	});
+	c.insertAdjacentHTML("beforeend", "<br><br>");
 	return c;
 };
 

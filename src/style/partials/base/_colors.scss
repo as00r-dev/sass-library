@@ -22,7 +22,7 @@
 
 			.text-hover-#{$key}-light-#{$i} {
 				&:hover {
-					color: mix($val, white, $i * 1%);
+					color: mix(white, $val, $i * 1%);
 				}
 			}
 
@@ -39,7 +39,7 @@
 
 			.text-hover-#{$key}-dark-#{$i} {
 				&:hover {
-					color: mix($val, black, $i * 1%);
+					color: mix(black, $val, $i * 1%);
 				}
 			}
 
