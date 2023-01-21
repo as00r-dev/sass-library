@@ -11,11 +11,19 @@ import { Colors } from "./components/colors";
 import { Hr } from "./components/hr";
 import { Column } from "./components/column";
 import { Row } from "./components/row";
+import { Navbar } from "./components/navbar";
 
 const body = document.querySelector("body");
 
 const container = document.createElement("div");
 container.classList.add("container");
+
+const navbar = Navbar({
+	title: "basics.css",
+	content: "lightweight and simple css library for css wizards",
+	classes: ["mb-4", "navbar-purple", "text-white"],
+});
+body.append(navbar);
 
 container.append(
 	Heading({

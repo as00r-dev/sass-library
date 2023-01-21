@@ -198,6 +198,36 @@ const Hr = obj => {
 
 /***/ }),
 
+/***/ "./src/js/components/navbar.js":
+/*!*************************************!*\
+  !*** ./src/js/components/navbar.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Navbar": () => (/* binding */ Navbar)
+/* harmony export */ });
+const Navbar = obj => {
+  const navConatainer = document.createElement("div");
+  navConatainer.classList.add("container");
+  const navbar = document.createElement("nav");
+  navbar.classList.add("navbar");
+  navbar.append(navConatainer);
+  obj.classes.forEach(className => {
+    navbar.classList.add(className);
+  });
+  const siteTitle = document.createElement("h2");
+  siteTitle.textContent = obj.title;
+  siteTitle.classList.add("site-title");
+  const p = document.createElement("p");
+  p.textContent = obj.content;
+  navConatainer.append(siteTitle, p);
+  return navbar;
+};
+
+/***/ }),
+
 /***/ "./src/js/components/paragraph.js":
 /*!****************************************!*\
   !*** ./src/js/components/paragraph.js ***!
@@ -328,6 +358,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_hr__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/hr */ "./src/js/components/hr.js");
 /* harmony import */ var _components_column__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/column */ "./src/js/components/column.js");
 /* harmony import */ var _components_row__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/row */ "./src/js/components/row.js");
+/* harmony import */ var _components_navbar__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/navbar */ "./src/js/components/navbar.js");
 // import styles
 
 
@@ -341,9 +372,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 const body = document.querySelector("body");
 const container = document.createElement("div");
 container.classList.add("container");
+const navbar = (0,_components_navbar__WEBPACK_IMPORTED_MODULE_10__.Navbar)({
+  title: "basics.css",
+  content: "lightweight and simple css library for css wizards",
+  classes: ["mb-4", "navbar-purple", "text-white"]
+});
+body.append(navbar);
 container.append((0,_components_heading__WEBPACK_IMPORTED_MODULE_1__.Heading)({
   type: 1,
   content: "Colors",
