@@ -1,7 +1,7 @@
 export const Card = (obj) => {
 	const card = document.createElement("div");
 	card.classList.add("card");
-	const cardTitle = document.createElement("h1");
+	const cardTitle = document.createElement("h3");
 	cardTitle.classList.add("card-title");
 	cardTitle.textContent = obj.title;
 	card.appendChild(cardTitle);

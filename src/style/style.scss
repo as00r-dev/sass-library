@@ -13,6 +13,8 @@
 
 // base & layout
 @import "partials/base/base";
+@import "partials/base/breakpoints";
+@import "partials/base/grid";
 
 // components
 @import "partials/components/card";

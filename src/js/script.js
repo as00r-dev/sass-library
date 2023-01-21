@@ -9,10 +9,15 @@ import { Anchor } from "./components/anchor";
 import { Card } from "./components/card";
 import { Colors } from "./components/colors";
 import { Hr } from "./components/hr";
+import { Column } from "./components/column";
+import { Row } from "./components/row";
 
 const body = document.querySelector("body");
 
-body.append(
+const container = document.createElement("div");
+container.classList.add("container");
+
+container.append(
 	Heading({
 		type: 1,
 		content: "Colors",
@@ -110,5 +115,55 @@ body.append(
 	}),
 	Hr({
 		classes: ["mt-4", "mb-4"],
+	}),
+	Heading({
+		type: 1,
+		content: "Grid System",
+		classes: ["mb-2"],
+	}),
+	Row({
+		children: [
+			Column({
+				classes: ["col-12-xs", "col-5-sm", "col-3-xl"],
+				children: [
+					Card({
+						title: "this a card lol",
+						content: "some content goes here :P",
+					}),
+				],
+			}),
+			Column({
+				classes: ["col-12-xs", "col-5-sm", "col-3-xl"],
+				children: [
+					Card({
+						title: "this a card lol",
+						content: "some content goes here :P",
+					}),
+				],
+			}),
+			Column({
+				classes: ["col-12-xs", "col-5-sm", "col-3-xl"],
+				children: [
+					Card({
+						title: "this a card lol",
+						content: "some content goes here :P",
+					}),
+				],
+			}),
+			Column({
+				classes: ["col-12-xs", "col-5-sm", "col-3-xl"],
+				children: [
+					Card({
+						title: "this a card lol",
+						content: "some content goes here :P",
+					}),
+				],
+			}),
+		],
+	}),
+	Hr({
+		classes: ["mt-4", "mb-4"],
 	})
 );
+
+body.append(container);
