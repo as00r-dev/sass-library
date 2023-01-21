@@ -308,6 +308,12 @@ body.append((0,_components_heading__WEBPACK_IMPORTED_MODULE_1__.Heading)({
 }), (0,_components_anchor__WEBPACK_IMPORTED_MODULE_4__.Anchor)({
   content: "click me",
   classes: ["btn-outlined-orange", "text-orange", "text-hover-white"]
+}), (0,_components_anchor__WEBPACK_IMPORTED_MODULE_4__.Anchor)({
+  content: "click me",
+  classes: ["btn-complement-purple"]
+}), (0,_components_anchor__WEBPACK_IMPORTED_MODULE_4__.Anchor)({
+  content: "click me",
+  classes: ["btn-complement-primary"]
 }));
 })();
 

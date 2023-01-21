@@ -64,5 +64,13 @@ body.append(
 	Anchor({
 		content: "click me",
 		classes: ["btn-outlined-orange", "text-orange", "text-hover-white"],
+	}),
+	Anchor({
+		content: "click me",
+		classes: ["btn-complement-purple"],
+	}),
+	Anchor({
+		content: "click me",
+		classes: ["btn-complement-primary"],
 	})
 );
