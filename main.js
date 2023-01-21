@@ -57,7 +57,7 @@ __webpack_require__.r(__webpack_exports__);
 const Card = obj => {
   const card = document.createElement("div");
   card.classList.add("card");
-  const cardTitle = document.createElement("h1");
+  const cardTitle = document.createElement("h3");
   cardTitle.classList.add("card-title");
   cardTitle.textContent = obj.title;
   card.appendChild(cardTitle);
@@ -134,6 +134,29 @@ const colors = ["primary", "secondary", "error", "info", "blue", "red", "yellow"
 
 /***/ }),
 
+/***/ "./src/js/components/column.js":
+/*!*************************************!*\
+  !*** ./src/js/components/column.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Column": () => (/* binding */ Column)
+/* harmony export */ });
+const Column = obj => {
+  const col = document.createElement("div");
+  obj.classes.forEach(className => {
+    col.classList.add(className);
+  });
+  obj.children.forEach(child => {
+    col.append(child);
+  });
+  return col;
+};
+
+/***/ }),
+
 /***/ "./src/js/components/heading.js":
 /*!**************************************!*\
   !*** ./src/js/components/heading.js ***!
@@ -192,6 +215,27 @@ const Paragraph = obj => {
     paragraph.classList.add(className);
   });
   return paragraph;
+};
+
+/***/ }),
+
+/***/ "./src/js/components/row.js":
+/*!**********************************!*\
+  !*** ./src/js/components/row.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Row": () => (/* binding */ Row)
+/* harmony export */ });
+const Row = obj => {
+  const row = document.createElement("div");
+  row.classList.add("row");
+  obj.children.forEach(child => {
+    row.append(child);
+  });
+  return row;
 };
 
 /***/ }),
@@ -279,6 +323,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_card__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/card */ "./src/js/components/card.js");
 /* harmony import */ var _components_colors__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/colors */ "./src/js/components/colors.js");
 /* harmony import */ var _components_hr__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/hr */ "./src/js/components/hr.js");
+/* harmony import */ var _components_column__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/column */ "./src/js/components/column.js");
+/* harmony import */ var _components_row__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/row */ "./src/js/components/row.js");
 // import styles
 
 
@@ -290,8 +336,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
 const body = document.querySelector("body");
-body.append((0,_components_heading__WEBPACK_IMPORTED_MODULE_1__.Heading)({
+const container = document.createElement("div");
+container.classList.add("container");
+container.append((0,_components_heading__WEBPACK_IMPORTED_MODULE_1__.Heading)({
   type: 1,
   content: "Colors",
   classes: ["heading"]
@@ -363,7 +413,40 @@ body.append((0,_components_heading__WEBPACK_IMPORTED_MODULE_1__.Heading)({
   classes: ["font-xxl"]
 }), (0,_components_hr__WEBPACK_IMPORTED_MODULE_7__.Hr)({
   classes: ["mt-4", "mb-4"]
+}), (0,_components_heading__WEBPACK_IMPORTED_MODULE_1__.Heading)({
+  type: 1,
+  content: "Grid System",
+  classes: ["mb-2"]
+}), (0,_components_row__WEBPACK_IMPORTED_MODULE_9__.Row)({
+  children: [(0,_components_column__WEBPACK_IMPORTED_MODULE_8__.Column)({
+    classes: ["col-12-xs", "col-5-sm", "col-3-xl"],
+    children: [(0,_components_card__WEBPACK_IMPORTED_MODULE_5__.Card)({
+      title: "this a card lol",
+      content: "some content goes here :P"
+    })]
+  }), (0,_components_column__WEBPACK_IMPORTED_MODULE_8__.Column)({
+    classes: ["col-12-xs", "col-5-sm", "col-3-xl"],
+    children: [(0,_components_card__WEBPACK_IMPORTED_MODULE_5__.Card)({
+      title: "this a card lol",
+      content: "some content goes here :P"
+    })]
+  }), (0,_components_column__WEBPACK_IMPORTED_MODULE_8__.Column)({
+    classes: ["col-12-xs", "col-5-sm", "col-3-xl"],
+    children: [(0,_components_card__WEBPACK_IMPORTED_MODULE_5__.Card)({
+      title: "this a card lol",
+      content: "some content goes here :P"
+    })]
+  }), (0,_components_column__WEBPACK_IMPORTED_MODULE_8__.Column)({
+    classes: ["col-12-xs", "col-5-sm", "col-3-xl"],
+    children: [(0,_components_card__WEBPACK_IMPORTED_MODULE_5__.Card)({
+      title: "this a card lol",
+      content: "some content goes here :P"
+    })]
+  })]
+}), (0,_components_hr__WEBPACK_IMPORTED_MODULE_7__.Hr)({
+  classes: ["mt-4", "mb-4"]
 }));
+body.append(container);
 })();
 
 /******/ })()
