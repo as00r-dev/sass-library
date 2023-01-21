@@ -122,6 +122,7 @@ container.append(
 		classes: ["mb-2"],
 	}),
 	Row({
+		classes: ["gap-2", "justify-center"],
 		children: [
 			Column({
 				classes: ["col-12-xs", "col-5-sm", "col-3-xl"],
