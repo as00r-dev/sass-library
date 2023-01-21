@@ -14,9 +14,9 @@
 // base & layout
 @import "partials/base/base";
 
-// utility classes
-@import "partials/base/utils";
-
 // components
 @import "partials/components/card";
 @import "partials/components/button";
+
+// utility classes
+@import "partials/base/utils";

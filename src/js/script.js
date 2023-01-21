@@ -8,6 +8,7 @@ import { Paragraph } from "./components/paragraph";
 import { Anchor } from "./components/anchor";
 import { Card } from "./components/card";
 import { Colors } from "./components/colors";
+import { Hr } from "./components/hr";
 
 const body = document.querySelector("body");
 
@@ -22,6 +23,9 @@ body.append(
 		content: "hover me",
 		classes: ["text-primary", "text-hover-orange-light-1"],
 	}),
+	Hr({
+		classes: ["mt-4", "mb-4"],
+	}),
 	Heading({
 		type: 1,
 		content: "Cards",
@@ -31,6 +35,9 @@ body.append(
 		title: "This is a card",
 		content:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit ",
+	}),
+	Hr({
+		classes: ["mt-4", "mb-4"],
 	}),
 	Heading({
 		type: 1,
@@ -72,5 +79,36 @@ body.append(
 	Anchor({
 		content: "click me",
 		classes: ["btn-complement-primary"],
+	}),
+	Hr({
+		classes: ["mt-4", "mb-4"],
+	}),
+	Heading({
+		type: 1,
+		content: "Font Sizes",
+		classes: ["heading", "mb-2"],
+	}),
+	Paragraph({
+		content: "This is small font",
+		classes: ["font-sm"],
+	}),
+	Paragraph({
+		content: "This is medium font",
+		classes: ["font-md"],
+	}),
+	Paragraph({
+		content: "This is large font",
+		classes: ["font-lg"],
+	}),
+	Paragraph({
+		content: "This is extra large font",
+		classes: ["font-xl"],
+	}),
+	Paragraph({
+		content: "This is extra, extra large font",
+		classes: ["font-xxl"],
+	}),
+	Hr({
+		classes: ["mt-4", "mb-4"],
 	})
 );
