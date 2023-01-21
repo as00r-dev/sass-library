@@ -232,6 +232,9 @@ __webpack_require__.r(__webpack_exports__);
 const Row = obj => {
   const row = document.createElement("div");
   row.classList.add("row");
+  obj.classes.forEach(className => {
+    row.classList.add(className);
+  });
   obj.children.forEach(child => {
     row.append(child);
   });
@@ -418,6 +421,7 @@ container.append((0,_components_heading__WEBPACK_IMPORTED_MODULE_1__.Heading)({
   content: "Grid System",
   classes: ["mb-2"]
 }), (0,_components_row__WEBPACK_IMPORTED_MODULE_9__.Row)({
+  classes: ["gap-2", "justify-center"],
   children: [(0,_components_column__WEBPACK_IMPORTED_MODULE_8__.Column)({
     classes: ["col-12-xs", "col-5-sm", "col-3-xl"],
     children: [(0,_components_card__WEBPACK_IMPORTED_MODULE_5__.Card)({
