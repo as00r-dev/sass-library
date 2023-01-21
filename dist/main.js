@@ -378,7 +378,7 @@ const container = document.createElement("div");
 container.classList.add("container");
 const navbar = (0,_components_navbar__WEBPACK_IMPORTED_MODULE_10__.Navbar)({
   title: "basics.css",
-  content: "lightweight and simple css library for css wizards",
+  content: "simple css library for css wizards",
   classes: ["mb-4", "navbar-purple", "text-white"]
 });
 body.append(navbar);
