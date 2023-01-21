@@ -155,6 +155,26 @@ const Heading = obj => {
 
 /***/ }),
 
+/***/ "./src/js/components/hr.js":
+/*!*********************************!*\
+  !*** ./src/js/components/hr.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Hr": () => (/* binding */ Hr)
+/* harmony export */ });
+const Hr = obj => {
+  const hr = document.createElement("hr");
+  obj.classes.forEach(className => {
+    hr.classList.add(className);
+  });
+  return hr;
+};
+
+/***/ }),
+
 /***/ "./src/js/components/paragraph.js":
 /*!****************************************!*\
   !*** ./src/js/components/paragraph.js ***!
@@ -258,10 +278,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_anchor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/anchor */ "./src/js/components/anchor.js");
 /* harmony import */ var _components_card__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/card */ "./src/js/components/card.js");
 /* harmony import */ var _components_colors__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/colors */ "./src/js/components/colors.js");
+/* harmony import */ var _components_hr__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/hr */ "./src/js/components/hr.js");
 // import styles
 
 
 // import modules
+
 
 
 
@@ -276,6 +298,8 @@ body.append((0,_components_heading__WEBPACK_IMPORTED_MODULE_1__.Heading)({
 }), (0,_components_colors__WEBPACK_IMPORTED_MODULE_6__.Colors)(), (0,_components_anchor__WEBPACK_IMPORTED_MODULE_4__.Anchor)({
   content: "hover me",
   classes: ["text-primary", "text-hover-orange-light-1"]
+}), (0,_components_hr__WEBPACK_IMPORTED_MODULE_7__.Hr)({
+  classes: ["mt-4", "mb-4"]
 }), (0,_components_heading__WEBPACK_IMPORTED_MODULE_1__.Heading)({
   type: 1,
   content: "Cards",
@@ -283,6 +307,8 @@ body.append((0,_components_heading__WEBPACK_IMPORTED_MODULE_1__.Heading)({
 }), (0,_components_card__WEBPACK_IMPORTED_MODULE_5__.Card)({
   title: "This is a card",
   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit "
+}), (0,_components_hr__WEBPACK_IMPORTED_MODULE_7__.Hr)({
+  classes: ["mt-4", "mb-4"]
 }), (0,_components_heading__WEBPACK_IMPORTED_MODULE_1__.Heading)({
   type: 1,
   content: "Buttons",
@@ -314,6 +340,29 @@ body.append((0,_components_heading__WEBPACK_IMPORTED_MODULE_1__.Heading)({
 }), (0,_components_anchor__WEBPACK_IMPORTED_MODULE_4__.Anchor)({
   content: "click me",
   classes: ["btn-complement-primary"]
+}), (0,_components_hr__WEBPACK_IMPORTED_MODULE_7__.Hr)({
+  classes: ["mt-4", "mb-4"]
+}), (0,_components_heading__WEBPACK_IMPORTED_MODULE_1__.Heading)({
+  type: 1,
+  content: "Font Sizes",
+  classes: ["heading", "mb-2"]
+}), (0,_components_paragraph__WEBPACK_IMPORTED_MODULE_3__.Paragraph)({
+  content: "This is small font",
+  classes: ["font-sm"]
+}), (0,_components_paragraph__WEBPACK_IMPORTED_MODULE_3__.Paragraph)({
+  content: "This is medium font",
+  classes: ["font-md"]
+}), (0,_components_paragraph__WEBPACK_IMPORTED_MODULE_3__.Paragraph)({
+  content: "This is large font",
+  classes: ["font-lg"]
+}), (0,_components_paragraph__WEBPACK_IMPORTED_MODULE_3__.Paragraph)({
+  content: "This is extra large font",
+  classes: ["font-xl"]
+}), (0,_components_paragraph__WEBPACK_IMPORTED_MODULE_3__.Paragraph)({
+  content: "This is extra, extra large font",
+  classes: ["font-xxl"]
+}), (0,_components_hr__WEBPACK_IMPORTED_MODULE_7__.Hr)({
+  classes: ["mt-4", "mb-4"]
 }));
 })();
 
