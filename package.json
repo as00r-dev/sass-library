@@ -1,5 +1,5 @@
 {
-	"name": "basics-css",
+	"name": "@as00r/basics-css",
 	"version": "1.0.0",
 	"description": "A simple style library made using Sass.",
 	"main": "index.js",
